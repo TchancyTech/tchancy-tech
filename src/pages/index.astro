@@ -1,0 +1,416 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lang = 'en'; // Default language, sera changé par JavaScript
+const translations = await import(`../i18n/en.json`);
+const t = translations.default;
+
+// Importer toutes les traductions
+const allTranslations = {
+  en: (await import(`../i18n/en.json`)).default,
+  fr: (await import(`../i18n/fr.json`)).default,
+  pt: (await import(`../i18n/pt.json`)).default,
+  es: (await import(`../i18n/es.json`)).default,
+};
+
+const faqStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: t.faq.question1,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.answer1,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: t.faq.question2,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.answer2,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: t.faq.question3,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t.faq.answer3,
+      },
+    },
+  ],
+};
+---
+<Layout
+  title="TCHANCY TECH - Digital Solutions"
+  description="TCHANCY TECH helps organizations build secure web platforms, mobile apps, enterprise systems, and cybersecurity foundations."
+  canonicalPath="/"
+  ogImage="/logo.png.png"
+  lang={lang}
+  translations={JSON.stringify(allTranslations)}
+>
+  <!-- Hero Section -->
+  <section id="home" aria-labelledby="home-title" class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-accent-cyan rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-primary-light rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen lg:min-h-auto py-20 lg:py-0">
+        <!-- Left Content -->
+        <div class="text-white space-y-8">
+          <h1 id="home-title" class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <span class="lang-hero-title">{t.hero.title}</span> <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-white lang-hero-title-accent">{t.hero.titleAccent}</span>
+          </h1>
+          
+          <p class="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-md lang-hero-subtitle">
+            {t.hero.subtitle}
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="#services" class="group px-8 py-4 bg-gradient-to-r from-accent-cyan to-primary-light rounded-xl font-semibold text-white text-base md:text-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center w-full sm:w-auto">
+              <span class="lang-hero-cta1">{t.hero.ctaPrimary}</span>
+              <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            <a href="#portfolio" class="px-8 py-4 border-2 border-white/30 rounded-xl font-semibold text-white text-base md:text-lg hover:bg-white/10 hover:border-white transition-all duration-300 backdrop-blur-sm text-center w-full sm:w-auto lang-hero-cta2">
+              {t.hero.ctaSecondary}
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Illustration -->
+        <div class="relative hidden lg:flex items-center justify-center">
+          <div class="relative w-full max-w-md">
+            <!-- Futuristic Card Design -->
+            <div class="relative">
+              <!-- Main Card -->
+              <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <!-- Top bars -->
+                <div class="space-y-4 mb-8">
+                  <div class="h-4 bg-gradient-to-r from-accent-cyan to-primary-light rounded-full w-3/4"></div>
+                  <div class="h-4 bg-gradient-to-r from-primary-light to-accent-cyan rounded-full w-1/2"></div>
+                </div>
+                
+                <!-- Grid of cards -->
+                <div class="grid grid-cols-2 gap-5">
+                  <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 h-40 border border-white/30 hover:bg-white/30 transition-all duration-300"></div>
+                  <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 h-40 border border-white/30 hover:bg-white/30 transition-all duration-300"></div>
+                  <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 h-40 border border-white/30 hover:bg-white/30 transition-all duration-300 col-span-2"></div>
+                </div>
+              </div>
+              
+              <!-- Floating elements -->
+              <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent-cyan rounded-lg opacity-80 animate-pulse"></div>
+              <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-primary-light rounded-lg opacity-80 animate-pulse delay-150"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" aria-labelledby="services-title" class="py-12 md:py-20 bg-background-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16">
+        <h2 id="services-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 lang-services-title">
+          {t.services.title}
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto lang-services-subtitle">
+          {t.services.subtitle}
+        </p>
+      </div>
+      
+      <!-- Services Grid -->
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+        <!-- Web Development -->
+        <div class="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-transparent hover:border-primary-light">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gradient-to-br from-primary-dark to-primary-light rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 md:w-8 h-6 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg md:text-2xl font-bold text-text-primary mb-2 md:mb-3 lang-service-web-title">
+            {t.services.webDev.title}
+          </h3>
+          <p class="text-sm md:text-base text-text-secondary leading-relaxed lang-service-web-desc">
+            {t.services.webDev.description}
+          </p>
+        </div>
+        
+        <!-- Mobile Apps -->
+        <div class="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-transparent hover:border-primary-light">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gradient-to-br from-primary to-accent-cyan rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 md:w-8 h-6 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg md:text-2xl font-bold text-text-primary mb-2 md:mb-3 lang-service-mobile-title">
+            {t.services.mobileApps.title}
+          </h3>
+          <p class="text-sm md:text-base text-text-secondary leading-relaxed lang-service-mobile-desc">
+            {t.services.mobileApps.description}
+          </p>
+        </div>
+        
+        <!-- Enterprise Systems -->
+        <div class="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-transparent hover:border-primary-light">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gradient-to-br from-primary-light to-accent-cyan rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 md:w-8 h-6 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg md:text-2xl font-bold text-text-primary mb-2 md:mb-3 lang-service-enterprise-title">
+            {t.services.enterprise.title}
+          </h3>
+          <p class="text-sm md:text-base text-text-secondary leading-relaxed lang-service-enterprise-desc">
+            {t.services.enterprise.description}
+          </p>
+        </div>
+        
+        <!-- Security -->
+        <div class="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-transparent hover:border-primary-light">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gradient-to-br from-accent-cyan to-primary rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 md:w-8 h-6 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg md:text-2xl font-bold text-text-primary mb-2 md:mb-3 lang-service-security-title">
+            {t.services.security.title}
+          </h3>
+          <p class="text-sm md:text-base text-text-secondary leading-relaxed lang-service-security-desc">
+            {t.services.security.description}
+          </p>
+        </div>
+      </div>
+      
+      <!-- View All Button -->
+      <div class="text-center">
+        <a href="#portfolio" class="inline-flex items-center px-6 md:px-8 py-3 md:py-4 text-primary font-semibold text-base md:text-lg hover:text-primary-light transition-colors group">
+          <span class="lang-services-viewall">{t.services.viewAll}</span>
+          <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" aria-labelledby="portfolio-title" class="py-12 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="portfolio-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 lang-portfolio-title">
+          {t.portfolio.title}
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto lang-portfolio-subtitle">
+          {t.portfolio.subtitle}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <article class="bg-background-light rounded-2xl p-6 border border-transparent hover:border-primary-light transition-all duration-300">
+          <p class="text-xs uppercase tracking-wider text-primary-light font-semibold mb-3 lang-portfolio-item1-category">{t.portfolio.project1.category}</p>
+          <h3 id="portfolio-project-1" class="font-display text-xl font-bold text-text-primary mb-3 lang-portfolio-item1-title">{t.portfolio.project1.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed lang-portfolio-item1-description">{t.portfolio.project1.description}</p>
+        </article>
+
+        <article class="bg-background-light rounded-2xl p-6 border border-transparent hover:border-primary-light transition-all duration-300">
+          <p class="text-xs uppercase tracking-wider text-primary-light font-semibold mb-3 lang-portfolio-item2-category">{t.portfolio.project2.category}</p>
+          <h3 id="portfolio-project-2" class="font-display text-xl font-bold text-text-primary mb-3 lang-portfolio-item2-title">{t.portfolio.project2.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed lang-portfolio-item2-description">{t.portfolio.project2.description}</p>
+        </article>
+
+        <article class="bg-background-light rounded-2xl p-6 border border-transparent hover:border-primary-light transition-all duration-300">
+          <p class="text-xs uppercase tracking-wider text-primary-light font-semibold mb-3 lang-portfolio-item3-category">{t.portfolio.project3.category}</p>
+          <h3 id="portfolio-project-3" class="font-display text-xl font-bold text-text-primary mb-3 lang-portfolio-item3-title">{t.portfolio.project3.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed lang-portfolio-item3-description">{t.portfolio.project3.description}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" aria-labelledby="about-title" class="py-12 md:py-20 bg-background-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="about-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 lang-about-title">
+          {t.about.title}
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto lang-about-subtitle">
+          {t.about.subtitle}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-display text-xl font-bold text-text-primary mb-3 lang-about-point1-title">{t.about.point1.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed lang-about-point1-description">{t.about.point1.description}</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-display text-xl font-bold text-text-primary mb-3 lang-about-point2-title">{t.about.point2.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed lang-about-point2-description">{t.about.point2.description}</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg">
+          <h3 class="font-display text-xl font-bold text-text-primary mb-3 lang-about-point3-title">{t.about.point3.title}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed lang-about-point3-description">{t.about.point3.description}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Section -->
+  <section id="credibility" aria-labelledby="credibility-title" class="py-12 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="credibility-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 lang-credibility-title">
+          {t.credibility.title}
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto lang-credibility-subtitle">
+          {t.credibility.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-10">
+        <div class="bg-background-light rounded-2xl p-6 text-center">
+          <p class="font-display text-3xl font-bold text-primary-dark mb-2 lang-credibility-metric1-value">{t.credibility.metric1.value}</p>
+          <p class="text-text-secondary text-sm lang-credibility-metric1-label">{t.credibility.metric1.label}</p>
+        </div>
+        <div class="bg-background-light rounded-2xl p-6 text-center">
+          <p class="font-display text-3xl font-bold text-primary-dark mb-2 lang-credibility-metric2-value">{t.credibility.metric2.value}</p>
+          <p class="text-text-secondary text-sm lang-credibility-metric2-label">{t.credibility.metric2.label}</p>
+        </div>
+        <div class="bg-background-light rounded-2xl p-6 text-center">
+          <p class="font-display text-3xl font-bold text-primary-dark mb-2 lang-credibility-metric3-value">{t.credibility.metric3.value}</p>
+          <p class="text-text-secondary text-sm lang-credibility-metric3-label">{t.credibility.metric3.label}</p>
+        </div>
+      </div>
+
+      <div class="bg-background-light rounded-2xl p-6 md:p-8">
+        <h3 class="font-display text-2xl font-bold text-text-primary mb-6 text-center lang-credibility-process-title">{t.credibility.process.title}</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="text-primary-light font-semibold mb-2 lang-credibility-step1-title">{t.credibility.process.step1.title}</h4>
+            <p class="text-text-secondary text-sm leading-relaxed lang-credibility-step1-description">{t.credibility.process.step1.description}</p>
+          </div>
+          <div>
+            <h4 class="text-primary-light font-semibold mb-2 lang-credibility-step2-title">{t.credibility.process.step2.title}</h4>
+            <p class="text-text-secondary text-sm leading-relaxed lang-credibility-step2-description">{t.credibility.process.step2.description}</p>
+          </div>
+          <div>
+            <h4 class="text-primary-light font-semibold mb-2 lang-credibility-step3-title">{t.credibility.process.step3.title}</h4>
+            <p class="text-text-secondary text-sm leading-relaxed lang-credibility-step3-description">{t.credibility.process.step3.description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" aria-labelledby="contact-title" class="py-12 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="contact-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 lang-contact-title">
+          {t.contact.title}
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto lang-contact-subtitle">
+          {t.contact.subtitle}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div class="bg-background-light rounded-2xl p-6 md:p-8 space-y-4">
+          <p class="text-sm text-text-secondary"><span class="font-semibold text-text-primary lang-contact-email-label">{t.contact.emailLabel}</span> <a href="mailto:Tchancy@tech-center.com" class="hover:text-primary-light transition-colors">Tchancy@tech-center.com</a></p>
+          <p class="text-sm text-text-secondary"><span class="font-semibold text-text-primary lang-contact-whatsapp-label">{t.contact.whatsappLabel}</span> <a href="https://wa.me/5545991257789" class="hover:text-primary-light transition-colors">+55 (45) 99125-7789</a></p>
+          <p class="text-sm text-text-secondary"><span class="font-semibold text-text-primary lang-contact-phone-label">{t.contact.phoneLabel}</span> <a href="tel:+5545991257789" class="hover:text-primary-light transition-colors">+55 (45) 99125-7789</a></p>
+          <p class="text-sm text-text-secondary"><span class="font-semibold text-text-primary lang-contact-location-label">{t.contact.locationLabel}</span> <span class="lang-contact-location-value">{t.contact.locationValue}</span></p>
+          <p class="text-sm text-text-secondary"><span class="font-semibold text-text-primary lang-contact-response-label">{t.contact.responseLabel}</span> <span class="lang-contact-response-value">{t.contact.responseValue}</span></p>
+        </div>
+
+        <div class="bg-primary-dark rounded-2xl p-6 md:p-8 text-white flex flex-col justify-between">
+          <div>
+            <h3 class="font-display text-2xl font-bold mb-3 lang-contact-card-title">{t.contact.cardTitle}</h3>
+            <p class="text-gray-200 text-sm leading-relaxed mb-6 lang-contact-card-description">{t.contact.cardDescription}</p>
+          </div>
+          <a href="mailto:Tchancy@tech-center.com" class="inline-block px-8 py-4 bg-accent-cyan hover:bg-accent-cyan/90 rounded-xl font-semibold text-white text-base text-center transition-all duration-300 lang-contact-button">
+            {t.contact.button}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" aria-labelledby="faq-title" class="py-12 md:py-20 bg-background-light">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="faq-title" class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary mb-4 lang-faq-title">
+          {t.faq.title}
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto lang-faq-subtitle">
+          {t.faq.subtitle}
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <article class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+          <h3 class="font-display text-xl font-bold text-text-primary mb-3 lang-faq-q1">{t.faq.question1}</h3>
+          <p class="text-text-secondary leading-relaxed lang-faq-a1">{t.faq.answer1}</p>
+        </article>
+        <article class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+          <h3 class="font-display text-xl font-bold text-text-primary mb-3 lang-faq-q2">{t.faq.question2}</h3>
+          <p class="text-text-secondary leading-relaxed lang-faq-a2">{t.faq.answer2}</p>
+        </article>
+        <article class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+          <h3 class="font-display text-xl font-bold text-text-primary mb-3 lang-faq-q3">{t.faq.question3}</h3>
+          <p class="text-text-secondary leading-relaxed lang-faq-a3">{t.faq.answer3}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqStructuredData)}></script>
+
+  <!-- CTA Section -->
+  <section class="py-12 md:py-20 bg-gradient-to-br from-primary-dark via-primary to-primary-light relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-accent-cyan rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-48 h-48 md:w-96 md:h-96 bg-primary-light rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 lang-cta-title">
+        {t.cta.title}
+      </h2>
+      <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-8 md:mb-10 leading-relaxed lang-cta-subtitle">
+        {t.cta.subtitle}
+      </p>
+      <a href="#contact" class="inline-block px-8 md:px-10 py-4 md:py-5 bg-accent-cyan hover:bg-accent-cyan/90 text-white font-bold text-base md:text-lg rounded-xl shadow-2xl hover:shadow-accent-cyan/50 hover:scale-105 transition-all duration-300 lang-cta-button">
+        {t.cta.button}
+      </a>
+    </div>
+  </section>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .delay-150 {
+      animation-delay: 150ms;
+    }
+  </style>
+</Layout>

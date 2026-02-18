@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "portfolio": "Portfólio",
+    "about": "Sobre Nós",
+    "faq": "FAQ",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Transformamos Ideias em",
+    "titleAccent": "Soluções Digitais",
+    "subtitle": "Projetamos plataformas digitais seguras e aplicações de negócio que transformam ideias em crescimento mensurável.",
+    "ctaPrimary": "Começar",
+    "ctaSecondary": "Ver Portfólio"
+  },
+  "services": {
+    "title": "Nossos Serviços",
+    "subtitle": "Fornecemos soluções tecnológicas abrangentes para empresas de todos os tamanhos",
+    "webDev": {
+      "title": "Desenvolvimento Web",
+      "description": "Aplicações web modernas e responsivas construídas com as melhores tecnologias"
+    },
+    "mobileApps": {
+      "title": "Aplicativos Mobile",
+      "description": "Aplicativos nativos e multiplataforma para iOS e Android"
+    },
+    "enterprise": {
+      "title": "Sistemas Empresariais",
+      "description": "Soluções personalizadas para gestão de processos e automação"
+    },
+    "security": {
+      "title": "Segurança",
+      "description": "Proteção de dados e conformidade alinhadas com as melhores práticas do setor"
+    },
+    "viewAll": "Ver Todos os Serviços"
+  },
+  "portfolio": {
+    "title": "Projetos em destaque",
+    "subtitle": "Uma seleção de produtos digitais entregues para equipes focadas em crescimento.",
+    "project1": {
+      "category": "PLATAFORMA E-COMMERCE",
+      "title": "Modernização de Marketplace de Varejo",
+      "description": "Concepção e desenvolvimento de vitrine de alto desempenho com pagamentos seguros e sincronização de estoque em tempo real."
+    },
+    "project2": {
+      "category": "APLICAÇÃO CORPORATIVA",
+      "title": "Suite Mobile para Operações de Campo",
+      "description": "Entrega de aplicativo multiplataforma para equipes de campo com modo offline, controle por perfil e dashboards de KPI."
+    },
+    "project3": {
+      "category": "CIBERSEGURANÇA",
+      "title": "Programa de Fortalecimento de Segurança",
+      "description": "Implementação de auditorias, correção de vulnerabilidades e base de monitoramento para ambientes regulados."
+    }
+  },
+  "about": {
+    "title": "Sobre a TCHANCY TECH",
+    "subtitle": "Ajudamos organizações a lançar sistemas digitais seguros e escaláveis.",
+    "point1": {
+      "title": "Entrega orientada ao negócio",
+      "description": "Cada funcionalidade é alinhada com objetivos mensuráveis, prazos e retorno esperado."
+    },
+    "point2": {
+      "title": "Qualidade de engenharia",
+      "description": "Priorizamos arquitetura limpa, manutenibilidade e desempenho desde o início."
+    },
+    "point3": {
+      "title": "Segurança por design",
+      "description": "Controles de segurança são aplicados em planejamento, desenvolvimento e release."
+    }
+  },
+  "credibility": {
+    "title": "Modelo de entrega confiável",
+    "subtitle": "Processo claro, comunicação transparente e resultados mensuráveis.",
+    "metric1": {
+      "value": "5+",
+      "label": "Anos criando soluções digitais"
+    },
+    "metric2": {
+      "value": "40+",
+      "label": "Projetos entregues"
+    },
+    "metric3": {
+      "value": "24/7",
+      "label": "Prontidão para monitoramento e suporte"
+    },
+    "process": {
+      "title": "Como trabalhamos",
+      "step1": {
+        "title": "1. Discovery",
+        "description": "Mapeamos objetivos, riscos, prazos e restrições técnicas do seu projeto."
+      },
+      "step2": {
+        "title": "2. Build",
+        "description": "Nossa equipe projeta, desenvolve e valida cada entrega em ciclos curtos."
+      },
+      "step3": {
+        "title": "3. Scale",
+        "description": "Após o go-live, otimizamos performance, segurança e confiabilidade contínua."
+      }
+    }
+  },
+  "contact": {
+    "title": "Vamos falar sobre seu projeto",
+    "subtitle": "Compartilhe seus objetivos e restrições e vamos propor um plano de execução claro.",
+    "emailLabel": "Email:",
+    "whatsappLabel": "WhatsApp:",
+    "phoneLabel": "Telefone:",
+    "locationLabel": "Localização:",
+    "locationValue": "Paraná, Brasil (atendendo clientes internacionais)",
+    "responseLabel": "Tempo de resposta:",
+    "responseValue": "Primeiro retorno em até 24 horas úteis",
+    "cardTitle": "Precisa de estimativa rápida?",
+    "cardDescription": "Envie seu briefing e prazo esperado. Retornamos com proposta prática e próximos passos.",
+    "button": "Enviar briefing"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Respostas rápidas sobre prazos, colaboração e suporte.",
+    "question1": "Quanto tempo leva um projeto típico?",
+    "answer1": "A maioria dos projetos começa com uma fase de Discovery de 1 a 2 semanas e segue em ciclos de entrega conforme o escopo.",
+    "question2": "Vocês atendem clientes fora do Brasil?",
+    "answer2": "Sim. Trabalhamos remotamente com equipes internacionais por meio de acompanhamento semanal estruturado.",
+    "question3": "O que acontece após o lançamento?",
+    "answer3": "Oferecemos suporte pós-lançamento, monitoramento e melhorias contínuas para manter performance e segurança em alto nível."
+  },
+  "cta": {
+    "title": "Pronto para Transformar Seu Negócio?",
+    "subtitle": "Agende uma conversa estratégica e receba um plano prático alinhado aos seus objetivos.",
+    "button": "Solicitar Orçamento"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "tagline": "Segurança & Tecnologia",
+    "quickLinks": "Links rápidos"
+  }
+}

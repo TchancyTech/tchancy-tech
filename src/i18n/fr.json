@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "À propos",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Nous transformons les idées en",
+    "titleAccent": "Solutions Digitales",
+    "subtitle": "Nous concevons des plateformes digitales sécurisées et des applications métier qui transforment vos idées en croissance mesurable.",
+    "ctaPrimary": "Commencer",
+    "ctaSecondary": "Voir Portfolio"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nous fournissons des solutions technologiques complètes pour les entreprises de toutes tailles",
+    "webDev": {
+      "title": "Développement Web",
+      "description": "Applications web modernes et réactives construites avec les meilleures technologies"
+    },
+    "mobileApps": {
+      "title": "Applications Mobile",
+      "description": "Applications natives et multiplateformes pour iOS et Android"
+    },
+    "enterprise": {
+      "title": "Systèmes d'Entreprise",
+      "description": "Solutions personnalisées pour la gestion des processus et l'automatisation"
+    },
+    "security": {
+      "title": "Sécurité",
+      "description": "Protection des données et conformité alignées sur les meilleures pratiques du secteur"
+    },
+    "viewAll": "Voir tous les services"
+  },
+  "portfolio": {
+    "title": "Projets en avant",
+    "subtitle": "Une sélection de produits digitaux livrés pour des équipes orientées croissance.",
+    "project1": {
+      "category": "PLATEFORME E-COMMERCE",
+      "title": "Modernisation d’une Marketplace Retail",
+      "description": "Conception et développement d’une vitrine performante avec paiements sécurisés et synchronisation d’inventaire en temps réel."
+    },
+    "project2": {
+      "category": "APPLICATION ENTREPRISE",
+      "title": "Suite Mobile pour Opérations Terrain",
+      "description": "Livraison d’une application multiplateforme pour les équipes terrain avec mode hors ligne, gestion des rôles et tableaux de bord KPI."
+    },
+    "project3": {
+      "category": "CYBERSÉCURITÉ",
+      "title": "Programme de Renforcement Sécurité",
+      "description": "Mise en place de workflows d’audit, correction de vulnérabilités et socle de supervision pour des environnements réglementés."
+    }
+  },
+  "about": {
+    "title": "À propos de TCHANCY TECH",
+    "subtitle": "Nous aidons les organisations à lancer des systèmes digitaux sécurisés et évolutifs.",
+    "point1": {
+      "title": "Pilotage orienté business",
+      "description": "Chaque fonctionnalité est alignée sur des objectifs mesurables, un calendrier clair et un retour sur investissement."
+    },
+    "point2": {
+      "title": "Qualité d’ingénierie",
+      "description": "Nous privilégions une architecture propre, maintenable et performante dès le départ."
+    },
+    "point3": {
+      "title": "Sécurité dès la conception",
+      "description": "Les contrôles de sécurité sont intégrés à la planification, au développement et aux mises en production."
+    }
+  },
+  "credibility": {
+    "title": "Un modèle de delivery fiable",
+    "subtitle": "Processus clair, communication transparente et résultats vérifiables.",
+    "metric1": {
+      "value": "5+",
+      "label": "Années d’expérience en solutions digitales"
+    },
+    "metric2": {
+      "value": "40+",
+      "label": "Projets livrés"
+    },
+    "metric3": {
+      "value": "24/7",
+      "label": "Capacité de supervision et support"
+    },
+    "process": {
+      "title": "Notre méthode",
+      "step1": {
+        "title": "1. Discovery",
+        "description": "Nous cadrons vos objectifs, risques, délais et contraintes techniques."
+      },
+      "step2": {
+        "title": "2. Build",
+        "description": "Notre équipe conçoit, développe et valide chaque livraison en cycles courts."
+      },
+      "step3": {
+        "title": "3. Scale",
+        "description": "Après la mise en ligne, nous optimisons performance, sécurité et fiabilité."
+      }
+    }
+  },
+  "contact": {
+    "title": "Parlons de votre projet",
+    "subtitle": "Partagez vos objectifs et contraintes, nous vous proposons un plan d’exécution clair.",
+    "emailLabel": "Email :",
+    "whatsappLabel": "WhatsApp :",
+    "phoneLabel": "Téléphone :",
+    "locationLabel": "Localisation :",
+    "locationValue": "Paraná, Brésil (accompagnement de clients internationaux)",
+    "responseLabel": "Délai de réponse :",
+    "responseValue": "Première réponse sous 24h ouvrées",
+    "cardTitle": "Besoin d’une estimation rapide ?",
+    "cardDescription": "Envoyez votre brief projet et votre planning cible. Nous revenons avec une proposition concrète et les prochaines étapes.",
+    "button": "Envoyer le brief"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Des réponses rapides sur les délais, la collaboration et le support.",
+    "question1": "Combien de temps dure un projet type ?",
+    "answer1": "La plupart des projets démarrent par une phase Discovery de 1 à 2 semaines, puis avancent en cycles de livraison selon le périmètre.",
+    "question2": "Travaillez-vous avec des clients hors Brésil ?",
+    "answer2": "Oui. Nous collaborons à distance avec des équipes internationales via un suivi hebdomadaire structuré.",
+    "question3": "Que se passe-t-il après la mise en production ?",
+    "answer3": "Nous assurons support, monitoring et améliorations continues pour maintenir un haut niveau de performance et de sécurité."
+  },
+  "cta": {
+    "title": "Prêt à transformer votre entreprise ?",
+    "subtitle": "Planifiez un échange stratégique et recevez une feuille de route concrète adaptée à vos objectifs.",
+    "button": "Demander un devis"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "tagline": "Sécurité & Technologie",
+    "quickLinks": "Liens rapides"
+  }
+}

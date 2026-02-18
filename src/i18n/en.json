@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About Us",
+    "faq": "FAQ",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "We turn Ideas into",
+    "titleAccent": "Digital Solutions",
+    "subtitle": "We design secure digital platforms and business applications that turn complex ideas into measurable growth.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Portfolio"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We provide comprehensive technology solutions for businesses of all sizes",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Modern and responsive web applications built with the best technologies"
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native and cross-platform applications for iOS and Android"
+    },
+    "enterprise": {
+      "title": "Enterprise Systems",
+      "description": "Custom solutions for process management and automation"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Data protection and compliance aligned with industry best practices"
+    },
+    "viewAll": "View All Services"
+  },
+  "portfolio": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of digital products delivered for growth-focused teams.",
+    "project1": {
+      "category": "E-COMMERCE PLATFORM",
+      "title": "Retail Marketplace Modernization",
+      "description": "Designed and built a high-performance storefront with secure payments and real-time inventory sync."
+    },
+    "project2": {
+      "category": "ENTERPRISE APP",
+      "title": "Field Operations Mobile Suite",
+      "description": "Delivered a cross-platform app for dispatch teams with offline mode, role-based access, and KPI dashboards."
+    },
+    "project3": {
+      "category": "CYBERSECURITY",
+      "title": "Security Hardening Program",
+      "description": "Implemented audit workflows, vulnerability remediation, and monitoring foundations for regulated environments."
+    }
+  },
+  "about": {
+    "title": "About TCHANCY TECH",
+    "subtitle": "We help organizations launch secure digital systems that scale with business goals.",
+    "point1": {
+      "title": "Business-First Delivery",
+      "description": "Every feature is aligned with measurable objectives, timelines, and ROI expectations."
+    },
+    "point2": {
+      "title": "Engineering Quality",
+      "description": "We focus on clean architecture, maintainability, and performance from day one."
+    },
+    "point3": {
+      "title": "Security by Design",
+      "description": "Security controls are embedded across planning, development, and release cycles."
+    }
+  },
+  "credibility": {
+    "title": "Trusted Delivery Model",
+    "subtitle": "Clear process, transparent communication, and outcomes you can validate.",
+    "metric1": {
+      "value": "5+",
+      "label": "Years building digital solutions"
+    },
+    "metric2": {
+      "value": "40+",
+      "label": "Projects delivered"
+    },
+    "metric3": {
+      "value": "24/7",
+      "label": "Monitoring & support readiness"
+    },
+    "process": {
+      "title": "How we work",
+      "step1": {
+        "title": "1. Discovery",
+        "description": "We map your goals, risks, timeline, and technical constraints."
+      },
+      "step2": {
+        "title": "2. Build",
+        "description": "Our team designs, develops, and validates each release in short cycles."
+      },
+      "step3": {
+        "title": "3. Scale",
+        "description": "After go-live, we optimize performance, security, and long-term reliability."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let’s discuss your project",
+    "subtitle": "Share your goals and constraints, and we’ll propose a clear execution plan.",
+    "emailLabel": "Email:",
+    "whatsappLabel": "WhatsApp:",
+    "phoneLabel": "Phone:",
+    "locationLabel": "Location:",
+    "locationValue": "Paraná, Brazil (serving international clients)",
+    "responseLabel": "Response time:",
+    "responseValue": "Initial reply within 24 business hours",
+    "cardTitle": "Need a quick estimate?",
+    "cardDescription": "Send your project brief and expected timeline. We’ll respond with a practical proposal and next steps.",
+    "button": "Send Project Brief"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers about delivery timelines, collaboration, and support.",
+    "question1": "How long does a typical project take?",
+    "answer1": "Most projects start with a 1–2 week discovery phase, then move into delivery cycles based on scope and priorities.",
+    "question2": "Do you work with clients outside Brazil?",
+    "answer2": "Yes. We collaborate remotely with international teams using structured weekly updates and shared delivery roadmaps.",
+    "question3": "What happens after launch?",
+    "answer3": "We provide post-launch support, monitoring, and iterative improvements to keep performance and security at a high level."
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Book a strategic call and get a practical roadmap tailored to your business goals.",
+    "button": "Request a Quote"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Security & Technology",
+    "quickLinks": "Quick Links"
+  }
+}
